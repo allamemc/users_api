@@ -16,6 +16,7 @@ app.use(
 		origin: 'https://note-nest-c.fly.dev',
 		methods: ['GET', 'POST', 'PUT', 'DELETE'],
 		allowedHeaders: ['Content-Type', 'Authorization'],
+		credentials: true,
 	})
 )
 
@@ -30,7 +31,7 @@ app.use(
 		},
 	})
 )
-
+app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(passport.initialize())
