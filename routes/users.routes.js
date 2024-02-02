@@ -35,6 +35,7 @@ router.post('/login', async (req, res) => {
 		res.cookie('sessionId', sessionId, {
 			httpOnly: true,
 			sameSite: 'none',
+			secure: true,
 			maxAge: 90 * 24 * 60 * 60 * 1000,
 		})
 
@@ -67,6 +68,7 @@ router.post('/guest', async (req, res) => {
 		res.cookie('sessionId', sessionId, {
 			httpOnly: true,
 			sameSite: 'none',
+			secure: true,
 			maxAge: 90 * 24 * 60 * 60 * 1000,
 		})
 		return res.json({ message: 'Login successful' })

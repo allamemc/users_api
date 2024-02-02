@@ -34,6 +34,7 @@ router.get('/success', (req, res) => {
 		res.cookie('sessionId', sessionId, {
 			httpOnly: true,
 			sameSite: 'none',
+			secure: true,
 			maxAge: 90 * 24 * 60 * 60 * 1000,
 		})
 		// Redirige al usuario a la página de inicio o dashboard en caso de autenticación exitosa
