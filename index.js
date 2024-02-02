@@ -13,7 +13,7 @@ db()
 
 app.use(
 	cors({
-		origin: 'http://localhost:5173',
+		origin: 'https://note-nest-c.fly.dev',
 		methods: ['GET', 'POST', 'PUT', 'DELETE'],
 		allowedHeaders: ['Content-Type', 'Authorization'],
 	})
